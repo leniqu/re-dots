@@ -24,8 +24,7 @@ This repository features an **auto-installer** that detects your distribution an
 
 ### Quick Start
 ```bash
-git clone https://github.com
-cd re-dots
+git clone https://github.com/leniqu/re-dots.git
 chmod +x install.sh
 ./install.sh
 ```
