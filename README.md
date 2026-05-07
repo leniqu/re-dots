@@ -1,19 +1,30 @@
 # re:dots
 
-Мои dotfiles для Hyprland с авто-цветами через Pywal.
-Поддерживает Gentoo и Arch Linux.
+My personal Hyprland dotfiles with auto-generated colors via **Pywal**.  
+Supports **Gentoo** and **Arch Linux**.
 
-## Стек
-- **WM:** Hyprland (Wayland)
-- **Bar:** Waybar
+## 🚀 Stack
+- **WM:** [Hyprland](https://hyprland.org) (Wayland)
+- **Bar:** Waybar (Wi-Fi, volume, media player)
 - **Launcher:** Rofi / Wofi
 - **Terminal:** Kitty
-- **Shell:** Zsh + Oh My Zsh
-- **Цвета:** Pywal
-- **Визуализатор:** Cava
-- **Уведомления:** SwayNC
+- **Shell:** Zsh
+- **Colors:** [Pywal](https://github.com/dylanaraps/pywal) (generates theme from wallpaper)
+- **Visualizer:** Cava
+- **Notifications:** SwayNC
+- **Lock:** Hyprlock
 
-## Установка
-git clone https://github.com/lenique/redots.git
-cd redots
+## 📦 Installation
+\`\`\`bash
+git clone https://github.com/leniqu/re-dots.git
+cd re-dots
 ./install.sh
+\`\`\`
+
+The script automatically detects your distribution (Gentoo or Arch) and installs all needed packages.
+
+## 📸 Preview
+![Desktop](preview.gif)
+
+## 📜 License
+MIT
