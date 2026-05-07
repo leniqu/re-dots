@@ -24,7 +24,7 @@ cd re-dots
 The script automatically detects your distribution (Gentoo or Arch) and installs all needed packages.
 
 ## 📸 Preview
-![Desktop](preview.gif)
+<video src="preview.mp4" controls width="100%"></video>
 
 ## 📜 License
 MIT
