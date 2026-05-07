@@ -24,7 +24,7 @@ cd re-dots
 The script automatically detects your distribution (Gentoo or Arch) and installs all needed packages.
 
 ## 📸 Preview
-<video src="preview.mp4" controls muted autoplay loop width="100%"></video>
+https://github.com/leniqu/re-dots/blob/main/preview.mp4
 
 ## 📜 License
 MIT
