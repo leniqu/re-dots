@@ -1,0 +1,16 @@
+window {
+    background-color: rgba(0, 0, 0, 0.5); /* Размытый фон на весь экран */
+}
+button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    color: white;
+}
+button:focus, button:active, button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

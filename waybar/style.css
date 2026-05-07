@@ -1,0 +1,75 @@
+/* 1. Импорт цветов Pywal всегда должен быть в первой строке */
+@import "../../.cache/wal/colors-waybar.css";
+
+/* Основное окно бара */
+window#waybar {
+    /* Чтобы не было ошибки Invalid number, используем такой метод прозрачности: */
+background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1; 
+    
+    border-bottom: 2px solid @color2; /* Акцентная полоса под цвет обоев */
+    border-radius: 12px;
+    color: @foreground;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    margin: 8px 15px; /* Сохраняем твои отступы */
+}
+
+/* Время слева */
+#clock {
+    padding-left: 20px; 
+    padding-right: 15px;
+    color: @foreground;
+}
+
+/* Островок рабочих столов (Капсула) */
+#workspaces {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+    border-radius: 20px;
+    padding: 0 5px;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding: 0 8px;
+    margin: 2px 0;
+    border-radius: 20px;
+}
+
+#workspaces button.active {
+    /* Активный воркспейс теперь красится в главный акцент обоев */
+    color: @background;
+    background-color: @color2;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Модули: Язык, Звук, Сеть */
+#language, #pulseaudio, #network {
+    padding: 0 12px;
+    background: none;
+    color: @foreground;
+}
+
+/* Твоя кнопка смены обоев */
+#custom-wallpaper {
+    color: @color2;
+    padding: 0 12px;
+    font-size: 16px;
+}
+
+/* Кнопка выключения */
+#custom-powermenu {
+    color: #ff5555; /* Оставил красный для безопасности */
+    padding-left: 10px;
+    padding-right: 20px; 
+    font-size: 18px;
+    background: none;
+}
+
+#custom-powermenu:hover {
+    color: @color3; /* При наведении меняется под стиль обоев */
+}

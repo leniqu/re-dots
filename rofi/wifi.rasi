@@ -1,0 +1,65 @@
+/** Финальный вертикальный конфиг для Wi-Fi (без пустот) **/
+
+configuration {
+    show-icons: false;
+}
+
+* {
+    background-color: transparent;
+    text-color:       white;
+    font:             "JetBrainsMono NF 12";
+}
+
+window {
+    width:            350px;
+    height:           450px;
+    transparency:     "real";
+    background-color: rgba(0, 0, 0, 0.7);
+    border:           1px;
+    border-color:     rgba(255, 255, 255, 0.1);
+    border-radius:    15px;
+    location:         center;
+    anchor:           center;
+}
+
+/* Убираем inputbar (поиск) полностью, чтобы не было пустого слота сверху */
+inputbar {
+    enabled:          false;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ listview ]; /* Оставляем только список */
+}
+
+listview {
+    padding:          15px;
+    spacing:          10px;
+    layout:           vertical;
+    fixed-height:     true;
+    background-color: transparent;
+}
+
+element {
+    padding:          10px;
+    border-radius:    10px;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-color:       #89b4fa;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+/* На всякий случай гасим иконки, чтобы не давали белых пятен */
+element-icon {
+    enabled:          false;
+}
+

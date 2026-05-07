@@ -1,0 +1,22 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+.notification {
+    background: alpha(@background, 0.6);  /* 60% прозрачности */
+    border-radius: 12px;
+    border: 2px solid @color1;
+    color: @foreground;
+    margin: 5px;
+    padding: 10px;
+}
+
+.control-center {
+    background: alpha(@background, 0.6);  /* 60% прозрачности */
+    border-radius: 15px;
+    border: 1px solid @color2;
+    color: @foreground;
+}
+
+.widget-title > label {
+    color: @color3;
+    font-size: 20px;
+}

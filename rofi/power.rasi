@@ -1,0 +1,14 @@
+* {
+    background-color: #000000;
+    text-color: #ffffff;
+}
+window {
+    width: 800px;
+}
+listview {
+    lines: 1;
+    columns: 5;
+}
+inputbar {
+    enabled: false;
+}

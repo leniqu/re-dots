@@ -1,0 +1,10 @@
+mode=drun
+show_icons=true
+width=500
+height=320
+allow_markup=true
+no_actions=true
+allow_images=true
+image_size=24
+hide_search=false
+style=/home/lenique/.config/wofi/style.css

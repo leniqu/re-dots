@@ -1,0 +1,6 @@
+mode=dmenu
+width=400
+height=400
+location=center
+hide_search=true
+lines=10

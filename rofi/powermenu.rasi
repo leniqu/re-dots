@@ -1,0 +1,57 @@
+/** Конфигурация для вертикального меню выключения **/
+
+configuration {
+    show-icons:                 false;
+}
+
+* {
+    /* Основной шрифт для всего окна */
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+window {
+    width:                        300px;
+    transparency:                 "real";
+    background-color:             rgba(0, 0, 0, 0.7);
+    border:                       1px;
+    border-color:                 rgba(255, 255, 255, 0.1);
+    border-radius:                15px;
+    location:                     center;
+    anchor:                       center;
+}
+
+mainbox {
+    background-color:            transparent;
+    children:                    [ listview ];
+}
+
+listview {
+    background-color:            transparent;
+    padding:                     15px;
+    spacing:                     10px;
+    lines:                       5;
+    fixed-height:                true;
+}
+
+element {
+    padding:                     12px;
+    border-radius:                10px;
+    background-color:            rgba(255, 255, 255, 0.05);
+    cursor:                      pointer;
+}
+
+element selected {
+    background-color:            rgba(255, 255, 255, 0.15);
+    border:                       1px;
+    border-color:                 #ff5555;
+}
+
+element-text {
+    /* Специальный шрифт для иконок внутри элементов */
+    font:                        "JetBrainsMono NF 24"; 
+    background-color:            transparent;
+    text-color:                  white;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    cursor:                      inherit;
+}

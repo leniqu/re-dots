@@ -1,0 +1,32 @@
+/* Совпадает с цветом твоего Waybar */
+window {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+#outer-box {
+    margin: 15px;
+}
+
+#entry {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 12px;
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкая подсветка выбора */
+}
+
+#text {
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+/* На всякий случай дублируем скрытие поиска в CSS */
+#input, #prompt {
+    all: unset;
+}

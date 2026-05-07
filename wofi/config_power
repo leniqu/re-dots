@@ -1,0 +1,10 @@
+mode=dmenu
+width=800
+height=150
+location=center
+orientation=horizontal
+columns=5
+lines=1
+hide_search=true
+# Убираем кеш, чтобы иконки не прыгали
+cache_file=/dev/null

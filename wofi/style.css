@@ -1,0 +1,54 @@
+/* Основное окно лаунчера */
+window {
+    background-color: rgba(0, 0, 0, 0.5); /* Твой цвет */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+/* МАГИЯ: Невидимый, но рабочий поиск */
+#input {
+    all: unset;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+/* Полное удаление лупы */
+#input image, #input * {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Контейнер списка приложений */
+#inner-box {
+    margin: 5px;
+}
+
+/* Обычная строка приложения */
+#entry {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Выбранная строка (подсветка) */
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.1); /* Твой #333, но с прозрачностью */
+}
+
+/* Текст внутри строки */
+#text {
+    color: white;
+}
+
+/* Иконки приложений */
+#img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}

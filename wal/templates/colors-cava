@@ -1,0 +1,35 @@
+[color]
+gradient = 1
+# Используем более контрастные цвета из 16-цветной палитры
+gradient_color_1 = '{color1}'
+gradient_color_2 = '{color3}'
+gradient_color_3 = '{color5}'
+gradient_color_4 = '{color2}'
+gradient_color_5 = '{color4}'
+gradient_color_6 = '{color6}'
+[general]
+framerate = 144
+# Ширина одного столбика (по умолчанию 2, попробуй 3 или 4 для жирных линий)
+bar_width = 2
+# Расстояние между столбиками (по умолчанию 1, можно оставить или поставить 2)
+bar_spacing = 1
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+
+[color]
+gradient = 1
+gradient_color_1 = '{color1}'
+gradient_color_2 = '{color2}'
+gradient_color_3 = '{color3}'
+gradient_color_4 = '{color4}'
+gradient_color_5 = '{color5}'
+gradient_color_6 = '{color6}'
+
+[smoothing]
+integral = 77
+monstercat = 1
