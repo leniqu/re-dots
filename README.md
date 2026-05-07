@@ -14,6 +14,6 @@
 - **Уведомления:** SwayNC
 
 ## Установка
-git clone https://github.com/skarukinandrej-jpg/redots.git
+git clone https://github.com/lenique/redots.git
 cd redots
 ./install.sh
