@@ -36,6 +36,46 @@ chmod +x install.sh
 > - **Backup:** The script automatically creates a backup of your old configs in `~/backup_TIMESTAMP`.
 
 ---
+## 🛠 Manual Installation
+
+If you prefer to set everything up yourself or use a different distribution, follow these steps to get **re-dots** running on your system.
+
+### 1. Clone the repository
+First, grab the configuration files and enter the directory:
+```bash
+git clone https://github.com
+cd re-dots
+```
+
+### 2. Install Dependencies
+Make sure you have the necessary components installed via your package manager:
+* **Window Manager:** `hyprland`, `hyprlock`, `hypridle`
+* **Status & UI:** `waybar`, `rofi-wayland`, `swaynotificationcenter`, `nwg-look`
+* **Terminal & Shell:** `kitty`, `zsh`
+* **Theming engine:** `python-pywal`
+* **Visuals & Tools:** `cava`, `fastfetch`, `wlogout`
+
+### 3. Deploy Configurations
+Copy the configuration folders to your local `.config` directory. 
+> [!WARNING]
+> This will overwrite existing files. It is recommended to back up your current configs first.
+
+```bash
+# Create config directory if it doesn't exist
+mkdir -p ~/.config
+
+# Copy configuration folders
+cp -r cava dunst fastfetch hypr kitty nwg-look rofi swaync wal waybar wlogout wofi ~/.config/
+
+# Apply Zsh configuration
+cp .zshrc ~/
+```
+
+### 4. Final Setup
+After copying the files, generate your color scheme using **Pywal** to match your wallpaper:
+```bash
+wal -i /path/to/your/wallpaper.jpg
+```
 
 
 The script automatically detects your distribution (Gentoo or Arch) and installs all needed packages.
