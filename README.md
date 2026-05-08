@@ -43,7 +43,7 @@ If you prefer to set everything up yourself or use a different distribution, fol
 ### 1. Clone the repository
 First, grab the configuration files and enter the directory:
 ```bash
-git clone https://github.com
+git clone https://github.com/leniqu/re-dots.git
 cd re-dots
 ```
 
