@@ -1,21 +1,21 @@
 {
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "height": 38,
-    "margin-top": 8,
-    "margin-left": 15,
-    "margin-right": 15,
+    "margin-top": 5,
+    "margin-left": 5,
+    "margin-right": 5,
     "spacing": 0,
 
-    "modules-left": ["clock"],
+    "modules-left": ["clock", "custom/notifications", "custom/player"],
     "modules-center": ["hyprland/workspaces"],
-"modules-right": [
-    "network", 
-    "hyprland/language", 
-    "custom/wallpaper", // Теперь он здесь (справа от раскладки)
-    "pulseaudio",        // И слева от звука
-    "custom/powermenu"
-],
+    "modules-right": [
+        "network", 
+        "hyprland/language", 
+        "custom/wallpaper",
+        "pulseaudio",
+        "custom/powermenu"
+    ],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -53,16 +53,42 @@
         "on-click": "pavucontrol"
     },
 
-"custom/wallpaper": {
-    "format": " ",
-    "on-click": "~/.config/hypr/scripts/wallselect.sh",
-    "on-click-right": "waypaper --random",
-    "tooltip": false
-},
+    "custom/wallpaper": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/wallselect.sh",
+        "on-click-right": "waypaper --random",
+        "tooltip": false
+    },
 
     "custom/powermenu": {
         "format": "",
         "on-click": "bash ~/.config/rofi/powermenu.sh",
         "tooltip": false
-    }
+    },
+
+    "custom/notifications": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+            "notification": "",
+            "none": "",
+            "dnd-notification": "",
+            "dnd-none": "",
+            "inhibited-notification": "",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+"custom/player": {
+    "format": " ",
+    "on-click": "~/.config/eww/player.sh",
+    "tooltip": false
+},
 }

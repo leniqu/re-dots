@@ -1,0 +1,43 @@
+window {
+    background: transparent;
+}
+.clock-box {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.clock-label {
+  font-size: 60px;
+  font-family: "JetBrains Mono", sans-serif;
+  color: #e0e0ff;
+  text-shadow: 0 0 10px rgba(200, 200, 255, 0.5);
+}
+.player-window {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+.cover {
+    border-radius: 5px;
+}
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.artist {
+    font-size: 14px;
+    color: #aaa;
+}
+.progress {
+    margin: 5px 0;
+}
+.controls button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+}

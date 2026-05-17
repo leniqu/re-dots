@@ -1,0 +1,13 @@
+{
+    "layer": "overlay",
+    "positionX": "left",
+    "positionY": "top",
+    "control-center-positionX": "left",
+    "control-center-positionY": "top",
+    "widgets": [
+        "title",
+        "dnd",
+        "notifications"
+    ]
+}
+	

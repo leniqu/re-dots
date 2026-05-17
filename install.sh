@@ -1,5 +1,3 @@
-cd ~/redots
-cat > install.sh << 'EOF'
 #!/usr/bin/env bash
 set -e
 
@@ -86,6 +84,3 @@ fi
 echo ""
 echo "Готово! Перезайди в систему (или введи 'Hyprland')."
 echo "Старые файлы сохранены: $BACKUP_DIR"
-EOF
-
-chmod +x install.sh

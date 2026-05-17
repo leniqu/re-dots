@@ -48,12 +48,12 @@ background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Модули: Язык, Звук, Сеть */
-#language, #pulseaudio, #network {
-    padding: 0 12px;
-    background: none;
-    color: @foreground;
+#language {
+    color: #ffffff; /* Вернули чистый белый цвет */
+    font-weight: bold;
+    margin-left: 8px;  /* Сохраняем отступ от Wi-Fi */
+    margin-right: 8px; /* Сохраняем отступ от звука */
 }
-
 /* Твоя кнопка смены обоев */
 #custom-wallpaper {
     color: @color2;
@@ -72,4 +72,19 @@ background-color: rgba(0, 0, 0, 0.3);
 
 #custom-powermenu:hover {
     color: @color3; /* При наведении меняется под стиль обоев */
+}
+#custom-notifications {
+    color: #f1c40f; /* Красивый сочный желтый цвет */
+    font-size: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+#network {
+    color: #3498db; /* Красивый классический синий цвет */
+    padding: 0 10px; /* Чтобы иконка не слипалась */
+    margin-right: 8px;
+}
+#pulseaudio {
+    color: #9b59b6; /* Красивый фиолетовый цвет */
+    padding: 0 10px;
 }

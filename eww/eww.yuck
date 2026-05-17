@@ -1,0 +1,51 @@
+;; ====================== ДИНАМИЧЕСКИЕ ПЕРЕМЕННЫЕ ПЛЕЕРА ======================
+(defpoll title :interval "2s" "playerctl metadata --format '{{ title }}' || echo 'No music'")
+(defpoll artist :interval "2s" "playerctl metadata --format '{{ artist }}' || echo 'No artist'")
+(defpoll cover_path :interval "2s" "~/.config/eww/scripts/get_cover.sh")
+
+;; Позиция и длина трека (вычисляется в секундах для progress-бара)
+(defpoll position :interval "1s" "playerctl position | cut -d'.' -f1 || echo 0")
+(defpoll length :interval "2s" "playerctl metadata --format '{{ mpris:length }}' | awk '{print int($1/1000000)}' || echo 1")
+
+;; ====================== ЧАСЫ ======================
+(defpoll clock-time :interval "1s" "date +%H:%M")
+(defpoll clock-date :interval "1s" "date '+%A, %d %B'")
+
+(defwindow clock
+    :monitor 0
+    :geometry (geometry :x "200" :y "200" :anchor "top right")
+    :stacking "bottom"
+    :windowtype "dock"
+    (clock)
+)
+
+(defwidget clock []
+    (box :orientation "v" :space-evenly false :halign "center" :class "clock-box"
+        (label :text clock-time :class "clock-label" :halign "center")
+        (label :text clock-date :class "clock-label clock-date-sub" :halign "center")
+    )
+)
+
+;; ====================== ПЛЕЕР ======================
+(defwindow player
+    :monitor 0
+    :geometry (geometry :x "50%" :y "5%" :anchor "top center")
+    :stacking "overlay"
+    :windowtype "dock"
+    (player_box)
+)
+
+(defwidget player_box []
+    (box :orientation "v" :class "player-window" :space-evenly false
+        ;; Динамически подставляем путь к скачанной обложке
+        (image :path cover_path :image-width 150 :image-height 150 :class "cover")
+        (label :text title :class "title" :limit-width 25)
+        (label :text artist :class "artist" :limit-width 30)
+        (progress :value position :max length :class "progress")
+        (box :orientation "h" :class "controls" :halign "center" :space-evenly true
+            (button :onclick "playerctl previous" "⏮")
+            (button :onclick "playerctl play-pause" "▶")
+            (button :onclick "playerctl next" "⏭")
+        )
+    )
+)
