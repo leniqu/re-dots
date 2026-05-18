@@ -4,7 +4,11 @@ My personal Hyprland dotfiles with auto-generated colors via **Pywal**.
 Supports **Gentoo** and **Arch Linux**.
 
 ## 📸 Preview
-https://github.com/user-attachments/assets/eccbb513-660d-4851-a6cc-1e7a0ac377b2
+
+https://github.com/user-attachments/assets/836ea3c1-509f-45a2-be24-7995ec81d080
+
+
+
 
 
 ## 🚀 Stack
@@ -36,6 +40,7 @@ chmod +x install.sh
 > - **Backup:** The script automatically creates a backup of your old configs in `~/backup_TIMESTAMP`.
 
 ---
+
 ## 🛠 Manual Installation
 
 If you prefer to set everything up yourself or use a different distribution, follow these steps to get **re-dots** running on your system.
@@ -50,10 +55,25 @@ cd re-dots
 ### 2. Install Dependencies
 Make sure you have the necessary components installed via your package manager:
 * **Window Manager:** `hyprland`, `hyprlock`, `hypridle`
-* **Status & UI:** `waybar`, `rofi-wayland`, `swaynotificationcenter`, `nwg-look`
+* **Status & UI:** `waybar`, `rofi-wayland`, `swaynotificationcenter`, `nwg-look`, `swayosd`
 * **Terminal & Shell:** `kitty`, `zsh`
-* **Theming engine:** `python-pywal`
-* **Visuals & Tools:** `cava`, `fastfetch`, `wlogout`
+* **Theming engine:** `python-pywal`, `playerctl`
+* **Visuals & Tools:** `cava`, `fastfetch`, `wlogout`, `swaybg`, `swaync`
+
+**Additional components (optional but recommended):**
+* **Game Mode:** `gamemode` (for `Super+G` toggle)
+* **SDDM Theme:** `sddm`, `qt6-svg`, `qt6-virtualkeyboard`, `qt6-multimedia`
+  ```bash
+  git clone -b main --depth=1 https://github.com/uiriansan/SilentSDDM
+  cd SilentSDDM/
+  sudo cp -rf . /usr/share/sddm/themes/silent/
+  sudo cp -r /usr/share/sddm/themes/silent/fonts/* /usr/share/fonts/
+  ```
+  Then enable it in `/etc/sddm.conf`:
+  ```ini
+  [Theme]
+  Current=silent
+  ```
 
 ### 3. Deploy Configurations
 Copy the configuration folders to your local `.config` directory. 
@@ -65,11 +85,19 @@ Copy the configuration folders to your local `.config` directory.
 mkdir -p ~/.config
 
 # Copy configuration folders
-cp -r cava dunst fastfetch hypr kitty nwg-look rofi swaync wal waybar wlogout wofi ~/.config/
+cp -r cava dunst fastfetch hypr kitty nwg-look rofi swaync swayosd wal waybar wlogout wofi ~/.config/
 
 # Apply Zsh configuration
 cp .zshrc ~/
 ```
+
+### 4. Restart Hyprland
+Log out and log back in for changes to take effect.
+
+
+
+
+
 
 ### 4. Final Setup
 After copying the files, generate your color scheme using **Pywal** to match your wallpaper:
